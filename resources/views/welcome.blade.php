@@ -4,17 +4,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Last Entries') }}</div>
-
+            <h1>Last Entries</h1>
+            @foreach ($entries as $entry)
+            <div class="card mt-4">
+                <div class="card-header">{{ $entry->title }}</div>
                 <div class="card-body">
-                    @foreach ($entries as $entry)
-                        <p>{{ $entry->title }}</p>
-                        <p>{{ $entry->content }}</p>
-                        <p>{{ $entry->user_id }}</p>
-                    @endforeach
+                    <p>{{ $entry->content }}</p>
                 </div>
+                <div class="card-footer">{{ $entry->user_id }}</div>
             </div>
+            @endforeach
         </div>
     </div>
 </div>
