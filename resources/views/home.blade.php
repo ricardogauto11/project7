@@ -17,7 +17,9 @@
                     {{ __('My Entries') }}
                     <ul>
                         @foreach ($entries as $entry)
-                            <li>{{ $entry->title}}</li>
+                            <li>
+                                <a href="{{ url('entries/' . $entry->id) }}">{{ $entry->title}}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
