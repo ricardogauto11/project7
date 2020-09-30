@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('My Entries') }}
+                    <ul>
+                        @foreach ($entries as $entry)
+                            <li>{{ $entry->title}}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
