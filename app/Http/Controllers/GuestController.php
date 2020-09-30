@@ -16,4 +16,9 @@ class GuestController extends Controller
 
         return view('welcome', compact('entries'));
     }
+
+    public function show(Entry $entry)
+    {
+        return view('entries.show', compact('entry'));
+    }
 }
