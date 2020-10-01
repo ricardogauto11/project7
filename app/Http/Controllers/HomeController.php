@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $entries = Entry::where('user_id', auth()->id())
-        ->get();
+        $entries = Entry::where('user_id', auth()->id())->get();
+
         return view('home', compact('entries'));
     }
 }
