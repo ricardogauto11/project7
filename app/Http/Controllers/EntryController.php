@@ -57,6 +57,6 @@ class EntryController extends Controller
 
         $status = 'Your entry has been updated successfully';
 
-        return back()->with(compact('status'));
+        return view('entries.show')->with(compact('status', 'entry'));
     }
 }
