@@ -18,7 +18,7 @@ Route::get('/', 'GuestController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('users/{user}', 'UserController@show');
+Route::get('@{user}', 'UserController@show');
 
 Route::get('entries/create', 'EntryController@create');
 Route::post('entries', 'EntryController@store');
